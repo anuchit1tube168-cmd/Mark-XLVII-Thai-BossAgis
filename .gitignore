@@ -15,6 +15,7 @@ env/
 # Secrets
 .env
 .env.*
+!.env.example
 config/api_keys.json
 config/certs/*.key
 config/certs/*.crt
@@ -23,6 +24,11 @@ config/certs/*.pem
 *.pem
 *.p12
 *.pfx
+credentials*.json
+service-account*.json
+service_account*.json
+secrets/
+private/
 
 # Local runtime files
 *.log
@@ -33,6 +39,22 @@ memory/*.sqlite3
 runtime/
 tmp/
 temp/
+backups/
+exports/
+records/
+
+# Sensitive datasets
+**/students.json
+**/students_data.js
+**/students_photos.js
+**/teachers_data.js
+**/deeds.json
+**/deeds_data.js
+**/all_assessments.json
+**/missing_students.json
+**/line_mappings.json
+**/medical_records*.json
+**/patients*.json
 
 # OS / editor
 .DS_Store
